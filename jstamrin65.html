@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <style>
+    .kool{
+        position: relative;
+      background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f5f0ff 45%,
+    #e9ddff 100%
+);
+  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 70vh;
+        >.contaner{
+            width:600px;
+      padding: 50px;
+position: absolute;
+height: 300px;
+ background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.88),
+        rgba(237, 233, 254, 0.68)
+        
+
+    );
+ backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(109, 40, 217, 0.16),
+        0 5px 20px rgba(139, 92, 246, 0.10),
+        inset 0 1px 2px rgba(255, 255, 255, 1);
+        
+
+>h1{
+  color: #312e81;
+    text-align: center;
+  position: relative;
+  bottom: 58px;
+  font-size: 34px;
+}
+        }
+
+        >.text{
+           width: 300px;
+            height: 250px;
+          padding: 0px 20px;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.72),
+        rgba(221, 214, 254, 0.52)
+    );
+
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(76, 29, 149, 0.13),
+        0 0 35px rgba(167, 139, 250, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+        >h3{
+            padding: 3px 20px;
+           font-size: 26px;
+           text-align: center;
+        
+        }
+      
+}
+
+        }
+
+        .hed{
+            border-radius: 8px;
+            color: #312e81;
+            text-align: center;
+            font-size:30px;
+              background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f5f0ff 45%,
+    #e9ddff 100%
+);
+
+display: flex;
+justify-content: center;
+align-items: center;
+        }
+        #p1,#p2{
+            font-size: 23px;
+            color: #312e81;
+        }
+        .header{
+            display: flex;
+            width: 1200px;
+      justify-content: space-around;
+      margin:30px auto;
+      flex-wrap: wrap;
+      align-self: center;
+      >div{
+        width: 200px;
+        box-shadow:
+    0 10px 30px rgba(49, 46, 129, 0.10),
+    0 20px 60px rgba(124, 58, 237, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+     background: linear-gradient(145deg, #ffffff, #f3e8ff);
+        >h3{
+         
+              color: #312e81;
+        }
+        >p{
+           
+            color: rgba(0, 0, 0, 0.604);
+            font-size: 21px;
+        }
+        >i{
+            color: #312e81;
+font-size: 20px;
+        }
+      }
+        }
+    .bot{
+font-size: 19px;
+height:45px;
+
+border-radius: 8px;
+background-color:#312e81 ;
+color: white;
+    }
+   </style>
+</head>
+<body>
+    <div class="hed">
+    <h1>JavaScript Mouse Events</h1>
+    </div>
+    <div class="header">
+        <div>
+          <i class="fa-solid fa-computer-mouse"></i>  
+          <h3>Midle Click</h3>
+          <p>تغیر پس زمینه به مشکی</p>
+        </div>
+        <div>
+           <i class="fa-solid fa-arrow-pointer"></i>
+           <h3>Left Click</h3>
+          <p>تغیر پس زمینه به صورتی</p> 
+        </div>
+        <div>
+<i class="fa-solid fa-arrow-pointer"></i>
+            <h3>Right Click</h3>
+
+          <p>تغیر پس زمینه به آبی تیره</p>
+        </div>
+        <div>
+<i class="fa-solid fa-hand-pointer"></i>
+            <h3>Double Click</h3>
+          <p>تغیر پس زمینه به آبی روشن</p>
+        </div>
+        <div>
+            <i class="fa-solid fa-crosshairs"></i>
+            <h3>Move Mouse</h3>
+          <p>Y,Xنمایش مختصات</p>
+        </div>
+    </div>
+    <div class="kool">
+      
+        <div class="contaner">
+        <h1>Get Mouse Position</h1>
+        </div>
+       <div class="text">
+       <h3>Move your mouse to see the coordinates!</h3>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+<p id="p1">X:</p>
+<button class="bot">Reset<i class="fa-solid fa-rotate-left"></i></button>
+<p id="p2">V:</p>
+
+     </div>   
+        </div>
+        
+    </div>
+     
+</body>
+<script>
+    const kool=document.querySelector('.kool')
+    const p2=document.querySelector('#p2')
+    const p1=document.querySelector('#p1')
+        const cont=document.querySelector('.contaner')
+         
+            const h=document.querySelector('.kool>.text>h3')
+cont.addEventListener('mouseenter',()=>{
+    h.innerText='Welcome'
+})
+
+cont.addEventListener('mouseleave',()=>{
+    h.innerText='Goodboy'
+})
+
+cont.addEventListener('mousemove',(e)=>{
+let x=e.layerX
+let y=e.layerY
+p1.innerText='X:'+x+''
+p2.innerText='Y:'+y+''
+})
+
+
+
+
+cont.addEventListener('dblclick',()=>{
+    kool.style.background= "linear-gradient(135deg, #93c5fd, #a5b4fc, #c7d2fe)"; 
+    h.innerText='Dblclick'
+    h.style.color='cornflowerblue'
+})
+
+cont.addEventListener('contextmenu',(e)=>{
+    e.preventDefault()
+    
+})
+
+
+
+cont.addEventListener('mousedown',(e)=>{
+    if(e.button==0){
+
+kool.style.background="linear-gradient(135deg, #d8b4fe, #c4b5fd, #ddd6fe)";
+    h.innerText='Left Click'
+h.style.color ="mediumorchid"
+    }else if(e.button==1){
+ kool.style.background="linear-gradient(135deg, #09090b, #18181b, #27272a)";
+h.innerText='Middle Click'
+h.style.color = "black"
+    }else{
+ kool.style.background= "linear-gradient(135deg, #312e81, #4338ca, #1e1b4b)";
+     h.innerText='Right Click'
+    h.style.color = "blue"
+    }
+})
+const res=document.querySelector('.bot')
+res.addEventListener('click',()=>{
+    h.innerText='Move your mouse to see the coordinates!'
+  kool.style.background = 'linear-gradient(135deg, #ffffff 0%, #f5f0ff 45%, #e9ddff 100%)';
+   h.style.color='black'
+    p1.innerText = 'X: 0';
+p2.innerText = 'Y: 0';
+    
+  
+})
+</script>
+</html>
